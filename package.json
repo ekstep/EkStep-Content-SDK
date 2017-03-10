@@ -7,7 +7,7 @@
     
   },
   "bin": {
-    "ekstepcontent": "index.js"
+    "ekstep-content-sdk": "index.js"
   },
   "author": "Harishkumar Gangula",
   "license": "MIT",
