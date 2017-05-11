@@ -4,7 +4,7 @@
   "description": "It is used to create, run the plugins for content editor in ekstep",
   "main": "index.js",
   "scripts": {
-    
+
   },
   "bin": {
     "ekstep-content-sdk": "index.js"
@@ -18,7 +18,8 @@
     "https": "^1.0.0",
     "n-cli": "^1.2.9",
     "path": "^0.12.7",
-    "unzip": "^0.1.11"
+    "unzip": "^0.1.11",
+    "generator-ekstep-content-plugin": "ekstep/generator-ekstep-content-plugin"
   },
   "preferGlobal": "true"
 }

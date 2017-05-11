@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 "use strict";
-var pluginHelper= require(__dirname+'/helper/create_plugin_helper.js');
 var Cli = new require("n-cli");
 var cli = new Cli({
   silent: false,
@@ -25,7 +24,7 @@ cli.on("serve", function(){
     var app = express();
     app.use(cors());
     app.use(express.static(process.cwd()));
-    
+
     app.get('/list', function (req, res) {
       var dirs = fs.readdirSync(process.cwd()).filter(file => fs.statSync(path.join(process.cwd(), file)).isDirectory());
       for(key in dirs){
@@ -40,10 +39,10 @@ cli.on("serve", function(){
     console.log('HTTPS Server listening on %s:%s', HOST, PORT);
 });
 
-cli.on("create", function(){
-    if (this.argv._[1] === undefined) {
-        throw new cli.Error("please provide plugin name \n")
-        process.exit(0);
-    }
-    pluginHelper.create(this.argv._[1],cli);
+
+cli.on("create", function() {
+    var env = require('yeoman-environment').createEnv();
+    env.lookup(function() {
+        env.run('ekstep-content-plugin', {'name': cli.argv._[1]});
+    });
 });
