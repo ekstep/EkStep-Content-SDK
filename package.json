@@ -19,7 +19,7 @@
     "n-cli": "^1.2.9",
     "path": "^0.12.7",
     "unzip": "^0.1.11",
-    "generator-ekstep-content-plugin": "ekstep/generator-ekstep-content-plugin#v0.1.0"
+    "generator-ekstep-content-plugin": "ekstep/generator-ekstep-content-plugin#v0.1.2"
   },
   "preferGlobal": "true"
 }
